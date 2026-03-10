@@ -6,9 +6,8 @@ import os
 # -----------------------------
 # Load model & features
 # -----------------------------
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-model = joblib.load(os.path.join(BASE_DIR, "final_profit_model.pkl"))
-features = joblib.load(os.path.join(BASE_DIR, "model_features.pkl"))
+model = joblib.load("final_profit_model.pkl")
+features = joblib.load("model_features.pkl")
 
 # -----------------------------
 # Page config
@@ -191,6 +190,7 @@ st.caption(
     "📌 Predictions are based on historical data and machine learning models. "
     "Use for decision support, not as financial guarantees."
 )
+
 
 
 
