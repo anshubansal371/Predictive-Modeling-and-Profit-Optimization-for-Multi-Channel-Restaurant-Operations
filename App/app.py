@@ -6,8 +6,8 @@ import joblib
 # -----------------------------
 # Load model & features
 # -----------------------------
-model = joblib.load("final_profit_model.pkl")
-features = joblib.load("model_features.pkl")
+model = joblib.load("../final_profit_model.pkl")
+features = joblib.load("../model_features.pkl")
 
 # -----------------------------
 # Page config
@@ -190,3 +190,4 @@ st.caption(
     "📌 Predictions are based on historical data and machine learning models. "
     "Use for decision support, not as financial guarantees."
 )
+
