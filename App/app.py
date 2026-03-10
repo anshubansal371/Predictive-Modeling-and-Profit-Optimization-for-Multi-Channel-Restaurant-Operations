@@ -2,12 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-
+import os
 # -----------------------------
 # Load model & features
 # -----------------------------
-model = joblib.load("../final_profit_model.pkl")
-features = joblib.load("../model_features.pkl")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(BASE_DIR, "..", "final_profit_model.pkl")
+features_path = os.path.join(BASE_DIR, "..", "model_features.pkl")
+model = joblib.load(model_path)
+features = joblib.load(features_path)
 
 # -----------------------------
 # Page config
@@ -190,4 +193,5 @@ st.caption(
     "📌 Predictions are based on historical data and machine learning models. "
     "Use for decision support, not as financial guarantees."
 )
+
 
